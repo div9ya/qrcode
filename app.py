@@ -8,10 +8,11 @@ from werkzeug.utils import secure_filename
 import base64
 import secrets
 from flask_cors import CORS
-CORS(app)
  
  
 app = Flask(__name__)
+CORS(app)
+
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 app.secret_key = secrets.token_hex(16)  # For session management
