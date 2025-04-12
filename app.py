@@ -7,6 +7,8 @@ import os
 from werkzeug.utils import secure_filename
 import base64
 import secrets
+from flask_cors import CORS
+CORS(app)
  
  
 app = Flask(__name__)
